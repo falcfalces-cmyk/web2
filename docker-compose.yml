@@ -1,0 +1,21 @@
+services:
+  web:
+    image: caddy:2-alpine
+    container_name: grupobelcom-web
+    restart: unless-stopped
+    ports:
+      - "172.28.1.212:8445:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./index.html:/srv/index.html:ro
+      - ./servicios.html:/srv/servicios.html:ro
+      - ./tarifas.html:/srv/tarifas.html:ro
+      - ./contacto.html:/srv/contacto.html:ro
+      - ./aviso-legal.html:/srv/aviso-legal.html:ro
+      - ./privacidad.html:/srv/privacidad.html:ro
+      - ./cookies.html:/srv/cookies.html:ro
+      - ./sitemap.xml:/srv/sitemap.xml:ro
+      - ./robots.txt:/srv/robots.txt:ro
+      - ./css:/srv/css:ro
+      - ./js:/srv/js:ro
+      - ./assets:/srv/assets:ro

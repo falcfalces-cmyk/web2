@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pruebas de dirección · Grupo Belcom</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<style>
+  @font-face { font-family:'Inter'; font-weight:400 800; font-display:swap; src:url('assets/fonts/inter.woff2') format('woff2'); }
+  @font-face { font-family:'Oswald'; font-weight:400 700; font-display:swap; src:url('assets/fonts/oswald.woff2') format('woff2'); }
+  @font-face { font-family:'Archivo'; font-weight:400 800; font-display:swap; src:url('assets/fonts/archivo.woff2') format('woff2'); }
+
+  :root{ --acento:#22c1e8; --negro:#0b0b0c; --hueso:#f4f4f2; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',sans-serif;background:#222;color:#fff}
+  .rotulo{padding:26px 32px 12px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#9aa0a6;font-weight:700}
+  .rotulo b{color:#fff}
+  .demo{margin-bottom:8px}
+
+  /* ============ A · INDUSTRIAL CONDENSADA ============ */
+  .A{position:relative;height:620px;overflow:hidden;background:var(--negro)}
+  .A img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% center;filter:saturate(1.05) contrast(1.06)}
+  .A::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,6,8,.95) 0%,rgba(6,6,8,.72) 45%,rgba(6,6,8,.1) 100%)}
+  .A-in{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:90px 32px}
+  .A-kick{font-family:'Inter';font-size:.72rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--acento);margin-bottom:22px}
+  .A h1{font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;font-size:5.4rem;line-height:.94;letter-spacing:-.005em;margin:0 0 26px;max-width:14ch}
+  .A h1 span{color:var(--acento)}
+  .A p{font-size:1.1rem;color:rgba(255,255,255,.75);max-width:44ch;margin:0 0 34px;line-height:1.6}
+  .A-rule{width:74px;height:5px;background:var(--acento);margin-bottom:26px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;font-weight:700;font-size:.92rem;text-decoration:none;border:1.5px solid transparent}
+  .b1{background:var(--acento);color:var(--negro)}
+  .b2{border-color:rgba(255,255,255,.45);color:#fff;margin-left:14px}
+
+  /* ============ B · PANTALLA PARTIDA EDITORIAL ============ */
+  .B{display:grid;grid-template-columns:1.05fr .95fr;height:620px;background:var(--negro)}
+  .B-txt{display:flex;flex-direction:column;justify-content:center;padding:0 72px}
+  .B-num{font-family:'Inter';font-size:.72rem;letter-spacing:.3em;color:var(--acento);font-weight:700;text-transform:uppercase;margin-bottom:auto;padding-top:64px}
+  .B h1{font-family:'Inter',sans-serif;font-weight:800;font-size:3.5rem;line-height:1.04;letter-spacing:-.035em;margin:0 0 24px}
+  .B h1 em{font-style:normal;display:block;color:var(--acento)}
+  .B p{color:rgba(255,255,255,.7);font-size:1.05rem;line-height:1.65;max-width:40ch;margin:0 0 32px}
+  .B-cta{margin-bottom:auto;padding-bottom:64px}
+  .B-media{position:relative;overflow:hidden}
+  .B-media img{width:100%;height:100%;object-fit:cover;filter:saturate(1.08) contrast(1.05)}
+  .B-badge{position:absolute;left:0;bottom:0;background:var(--acento);color:var(--negro);padding:22px 30px;font-weight:800;font-size:1.05rem;letter-spacing:-.02em}
+  .B-badge small{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;opacity:.7;margin-top:4px}
+
+  /* ============ C · BLOQUE DE COLOR / SUIZO ============ */
+  .C{background:var(--hueso);color:#111;padding:0}
+  .C-in{max-width:1240px;margin:0 auto;padding:72px 32px 0;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end}
+  .C-kick{display:inline-block;background:var(--acento);color:#08080a;font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:9px 16px;margin-bottom:26px}
+  .C h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:4.1rem;line-height:.98;letter-spacing:-.04em;margin:0 0 22px}
+  .C h1 u{text-decoration:none;box-shadow:inset 0 -.22em 0 var(--acento)}
+  .C p{color:#5a5b61;font-size:1.06rem;line-height:1.6;max-width:42ch;margin:0 0 32px}
+  .C-media{position:relative;height:420px;overflow:hidden}
+  .C-media img{width:100%;height:100%;object-fit:cover;filter:saturate(1.08) contrast(1.05)}
+  .C .b1{background:#111;color:#fff}
+  .C .b2{border-color:rgba(0,0,0,.2);color:#111}
+  .C-strip{margin-top:60px;background:#111;color:#fff}
+  .C-strip-in{max-width:1240px;margin:0 auto;padding:22px 32px;display:flex;gap:44px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.65)}
+  .C-strip b{color:var(--acento)}
+</style>
+</head>
+<body>
+
+<p class="rotulo">Dirección <b>A</b> — Industrial condensada (tipografía Oswald, mayúsculas)</p>
+<div class="demo">
+  <section class="A">
+    <img src="assets/hero.jpg" alt="">
+    <div class="A-in">
+      <p class="A-kick">La Rioja · Navarra · Aragón · País Vasco</p>
+      <h1>Ingeniería de <span>instalaciones</span></h1>
+      <div class="A-rule"></div>
+      <p>Electricidad, telecomunicaciones, redes, seguridad y energía para empresa, industria y entornos públicos.</p>
+      <a href="#" class="btn b1">Solicitar presupuesto</a><a href="#" class="btn b2">941 89 37 78</a>
+    </div>
+  </section>
+</div>
+
+<p class="rotulo">Dirección <b>B</b> — Pantalla partida editorial (foto a un lado, sin texto encima)</p>
+<div class="demo">
+  <section class="B">
+    <div class="B-txt">
+      <p class="B-num">Grupo Belcom · desde La Rioja</p>
+      <h1>Una empresa.<em>Trece especialidades.</em></h1>
+      <p>Electricidad, telecomunicaciones, redes, seguridad y energía. El mismo equipo desde el proyecto hasta el mantenimiento.</p>
+      <div class="B-cta"><a href="#" class="btn b1">Solicitar presupuesto</a><a href="#" class="btn b2">941 89 37 78</a></div>
+    </div>
+    <div class="B-media">
+      <img src="assets/hero.jpg" alt="">
+      <div class="B-badge">941 89 37 78<small>Respuesta en 24h</small></div>
+    </div>
+  </section>
+</div>
+
+<p class="rotulo">Dirección <b>C</b> — Bloque de color / suizo (fondo claro, color como protagonista)</p>
+<div class="demo">
+  <section class="C">
+    <div class="C-in">
+      <div>
+        <span class="C-kick">Instaladores desde 4 comunidades</span>
+        <h1>Lo que tu empresa necesita para <u>funcionar</u></h1>
+        <p>Electricidad, telecomunicaciones, redes, seguridad y energía, con un único equipo técnico de principio a fin.</p>
+        <a href="#" class="btn b1">Solicitar presupuesto</a><a href="#" class="btn b2">941 89 37 78</a>
+      </div>
+      <div class="C-media"><img src="assets/hero.jpg" alt=""></div>
+    </div>
+    <div class="C-strip">
+      <div class="C-strip-in">
+        <span><b>13</b> servicios</span>
+        <span><b>5</b> ciudades</span>
+        <span><b>24h</b> respuesta</span>
+        <span><b>1</b> interlocutor</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>

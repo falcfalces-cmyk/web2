@@ -1,0 +1,84 @@
+{
+  "_ayuda": "Edita aquí los precios y ejecuta: python3 build.py. 'destacada' marca la tarifa recomendada.",
+  "fibra": {
+    "titulo": "Fibra óptica",
+    "nota": "Precio por defecto, para cualquier zona.",
+    "tarifas": [
+      {
+        "nombre": "100 Mbps",
+        "velocidad": "100",
+        "precio": "20,90"
+      },
+      {
+        "nombre": "300 Mbps",
+        "velocidad": "300",
+        "precio": "24,90",
+        "destacada": true
+      },
+      {
+        "nombre": "600 Mbps",
+        "velocidad": "600",
+        "precio": "29,90"
+      },
+      {
+        "nombre": "Inactividad",
+        "detalle": "Fibra sin uso",
+        "precio": "8"
+      }
+    ]
+  },
+  "movil": {
+    "titulo": "Móvil",
+    "nota": "IVA incluido, sin permanencia. Mismo precio en cualquier pueblo.",
+    "tarifas": [
+      {
+        "nombre": "6.000 min",
+        "datos": "Sin datos",
+        "precio": "6,90"
+      },
+      {
+        "nombre": "6.000 min",
+        "datos": "25 GB",
+        "precio": "6,95"
+      },
+      {
+        "nombre": "6.000 min",
+        "datos": "70 GB",
+        "precio": "8,90"
+      },
+      {
+        "nombre": "6.000 min",
+        "datos": "120 GB",
+        "precio": "10,90",
+        "destacada": true
+      },
+      {
+        "nombre": "6.000 min",
+        "datos": "200 GB",
+        "precio": "11,90"
+      },
+      {
+        "nombre": "6.000 min",
+        "datos": "400 GB",
+        "precio": "13,90"
+      }
+    ]
+  },
+  "fijo": {
+    "titulo": "Línea fija",
+    "nota": "Un alta en menos de 24 h laborables factura el mes completo.",
+    "tarifas": [
+      {
+        "nombre": "Línea básica",
+        "detalle": "Telefonía fija",
+        "precio": "6"
+      },
+      {
+        "nombre": "Con 1.000 minutos",
+        "detalle": "Llamadas incluidas",
+        "precio": "10",
+        "destacada": true
+      }
+    ]
+  }
+}

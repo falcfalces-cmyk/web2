@@ -1,0 +1,9 @@
+:80 {
+	root * /srv
+	file_server
+	encode gzip
+
+	# el navegador revalida siempre HTML, CSS y JS: los cambios se ven con un F5
+	@dinamico path *.html / *.css *.js
+	header @dinamico Cache-Control "no-cache"
+}

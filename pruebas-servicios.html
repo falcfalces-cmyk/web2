@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pruebas sección servicios · Grupo Belcom</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<style>
+  @font-face { font-family:'Inter'; font-weight:400 800; font-display:swap; src:url('assets/fonts/inter.woff2') format('woff2'); }
+  :root{ --acento:#22c1e8; --negro:#0b0b0c; --hueso:#f4f4f2; --tinta:#16161a; --suave:#5f6066; --linea:rgba(22,22,26,.14); }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',sans-serif;background:#2a2a2c;color:var(--tinta)}
+  .rotulo{padding:30px 32px 14px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#9aa0a6;font-weight:700}
+  .rotulo b{color:#fff}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+  h2.tit{font-size:2.5rem;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:0 0 18px}
+  .lead{color:var(--suave);font-size:1.05rem;max-width:56ch;margin:0 0 56px;line-height:1.6}
+  .kick{font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--acento);margin:0 0 18px}
+
+  /* ================= S1 · MOSAICO CON FOTO ================= */
+  .S1{background:var(--hueso);padding:88px 0}
+  .m-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .m-card{position:relative;min-height:330px;overflow:hidden;background:#111;display:flex;flex-direction:column;justify-content:flex-end;padding:34px;text-decoration:none;color:#fff}
+  .m-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05);transition:transform .6s ease}
+  .m-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.25) 0%,rgba(8,8,10,.55) 45%,rgba(8,8,10,.92) 100%)}
+  .m-card:hover img{transform:scale(1.05)}
+  .m-body{position:relative;z-index:2}
+  .m-cat{font-size:1.55rem;font-weight:800;letter-spacing:-.025em;margin:0 0 14px}
+  .m-list{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0;padding:0;list-style:none}
+  .m-list li{font-size:.9rem;font-weight:600;color:rgba(255,255,255,.78);display:flex;align-items:center;gap:7px}
+  .m-list li::before{content:'';width:5px;height:5px;background:var(--acento);flex-shrink:0}
+  .m-num{position:absolute;top:26px;right:30px;z-index:2;font-size:.74rem;font-weight:800;letter-spacing:.18em;color:var(--acento)}
+
+  /* ================= S2 · ÍNDICE EDITORIAL ================= */
+  .S2{background:var(--hueso);padding:88px 0}
+  .e-cat{font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--suave);padding:34px 0 10px;border-top:2px solid var(--tinta);margin:0}
+  .e-row{display:grid;grid-template-columns:62px 1fr 1.1fr 40px;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid var(--linea);text-decoration:none;color:inherit;transition:background .2s,padding .2s}
+  .e-row:hover{background:#fff;padding-left:18px;padding-right:18px}
+  .e-n{font-size:.78rem;font-weight:800;color:var(--acento);letter-spacing:.1em}
+  .e-name{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+  .e-desc{font-size:.92rem;color:var(--suave);line-height:1.55}
+  .e-arr{justify-self:end;color:var(--linea);transition:color .2s,transform .2s}
+  .e-row:hover .e-arr{color:var(--acento);transform:translateX(5px)}
+  .e-arr svg{width:22px;height:22px}
+
+  /* ================= S3 · BENTO ================= */
+  .S3{background:var(--negro);padding:88px 0;color:#fff}
+  .S3 h2.tit{color:#fff}
+  .S3 .lead{color:rgba(255,255,255,.62)}
+  .b-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px}
+  .b{position:relative;overflow:hidden;background:#17181b;border:1px solid rgba(255,255,255,.1);padding:26px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:#fff;transition:border-color .25s}
+  .b:hover{border-color:var(--acento)}
+  .b-wide{grid-column:span 2}
+  .b-tall{grid-row:span 2}
+  .b img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05)}
+  .b.has-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.2),rgba(8,8,10,.9))}
+  .b-in{position:relative;z-index:2}
+  .b-k{font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--acento);margin:0 0 8px}
+  .b-t{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;margin:0 0 6px}
+  .b-d{font-size:.84rem;color:rgba(255,255,255,.62);line-height:1.5;margin:0}
+  .b-icon{position:relative;z-index:2;width:26px;height:26px;color:var(--acento);margin-bottom:auto}
+  .b-icon svg{width:100%;height:100%;stroke-width:1.7}
+</style>
+</head>
+<body>
+
+<!-- ============ S1 ============ -->
+<p class="rotulo">Opción <b>1</b> — Mosaico con foto por categoría (aprovecha las 4 fotos que ya tenemos)</p>
+<section class="S1">
+  <div class="wrap">
+    <p class="kick">Qué hacemos</p>
+    <h2 class="tit">Cuatro frentes, un solo equipo</h2>
+    <p class="lead">Trece líneas de servicio agrupadas en cuatro especialidades. No tienes que coordinar entre el electricista, el de redes y el de seguridad.</p>
+    <div class="m-grid">
+      <a class="m-card" href="#"><img src="assets/fibra.jpg" alt=""><span class="m-num">01</span><div class="m-body">
+        <p class="m-cat">Conectividad y redes</p>
+        <ul class="m-list"><li>Telecomunicaciones</li><li>Fibra óptica</li><li>Infraestructuras de red</li><li>Telefonía</li></ul>
+      </div></a>
+      <a class="m-card" href="#"><img src="assets/seguridad.jpg" alt=""><span class="m-num">02</span><div class="m-body">
+        <p class="m-cat">Seguridad</p>
+        <ul class="m-list"><li>Ciberseguridad</li><li>Videovigilancia</li><li>Alarmas</li></ul>
+      </div></a>
+      <a class="m-card" href="#"><img src="assets/solar.jpg" alt=""><span class="m-num">03</span><div class="m-body">
+        <p class="m-cat">Instalaciones eléctricas y energía</p>
+        <ul class="m-list"><li>Electricidad</li><li>Energías renovables</li><li>Cargadores VE</li></ul>
+      </div></a>
+      <a class="m-card" href="#"><img src="assets/rack.jpg" alt=""><span class="m-num">04</span><div class="m-body">
+        <p class="m-cat">Automatización e informática</p>
+        <ul class="m-list"><li>Domótica</li><li>KNX</li><li>Soluciones informáticas</li></ul>
+      </div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S2 ============ -->
+<p class="rotulo">Opción <b>2</b> — Índice editorial: cada servicio como una fila grande</p>
+<section class="S2">
+  <div class="wrap">
+    <p class="kick">Qué hacemos</p>
+    <h2 class="tit">Trece líneas de servicio</h2>
+    <p class="lead">Del cuadro eléctrico al firewall, con el mismo interlocutor de principio a fin.</p>
+
+    <p class="e-cat">01 — Conectividad y redes</p>
+    <a class="e-row" href="#"><span class="e-n">01</span><span class="e-name">Telecomunicaciones</span><span class="e-desc">Voz, datos y comunicaciones unificadas para empresa, industria y entornos públicos.</span><span class="e-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+    <a class="e-row" href="#"><span class="e-n">02</span><span class="e-name">Fibra óptica</span><span class="e-desc">Despliegue FTTH y troncales, empalmes y certificación de cada tramo.</span><span class="e-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+    <a class="e-row" href="#"><span class="e-n">03</span><span class="e-name">Infraestructuras de red</span><span class="e-desc">Cableado estructurado, redundancia y monitorización proactiva.</span><span class="e-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+    <a class="e-row" href="#"><span class="e-n">04</span><span class="e-name">Telefonía</span><span class="e-desc">Centralitas IP y telefonía fija y móvil integrada y gestionada.</span><span class="e-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+
+    <p class="e-cat">02 — Seguridad</p>
+    <a class="e-row" href="#"><span class="e-n">05</span><span class="e-name">Ciberseguridad</span><span class="e-desc">Auditorías, firewalls de nueva generación y protección frente a ransomware.</span><span class="e-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+    <a class="e-row" href="#"><span class="e-n">06</span><span class="e-name">Videovigilancia</span><span class="e-desc">Cámaras IP, grabación, analítica de vídeo y acceso remoto.</span><span class="e-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+    <a class="e-row" href="#"><span class="e-n">07</span><span class="e-name">Alarmas</span><span class="e-desc">Sistemas de intrusión conectados con aviso inmediato.</span><span class="e-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+  </div>
+</section>
+
+<!-- ============ S3 ============ -->
+<p class="rotulo">Opción <b>3</b> — Bento: mosaico asimétrico, unos con foto y otros con icono</p>
+<section class="S3">
+  <div class="wrap">
+    <p class="kick">Qué hacemos</p>
+    <h2 class="tit">Trece servicios, cuatro especialidades</h2>
+    <p class="lead">Todo lo que tu instalación necesita, sin repartirlo entre varios proveedores.</p>
+    <div class="b-grid">
+      <a class="b b-wide b-tall has-img" href="#"><img src="assets/fibra.jpg" alt=""><div class="b-in"><p class="b-k">01 · Conectividad</p><p class="b-t">Redes y fibra óptica</p><p class="b-d">Telecomunicaciones · Fibra óptica · Infraestructuras de red · Telefonía</p></div></a>
+      <a class="b" href="#"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><div class="b-in"><p class="b-t">Ciberseguridad</p><p class="b-d">Auditorías y firewalls</p></div></a>
+      <a class="b" href="#"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16.75 12h3.632a1 1 0 0 1 .894 1.447l-2.034 4.069a1 1 0 0 1-1.708.134l-2.124-2.97"/><path d="M17.106 9.053a1 1 0 0 1 .447 1.341l-3.106 6.211a1 1 0 0 1-1.342.447L3.61 12.3a2.92 2.92 0 0 1-1.3-3.91L3.69 5.6a2.92 2.92 0 0 1 3.92-1.3z"/><path d="M2 19h3.76a2 2 0 0 0 1.8-1.1L9 15"/><path d="M2 21v-4"/></svg></span><div class="b-in"><p class="b-t">Videovigilancia</p><p class="b-d">Cámaras IP y analítica</p></div></a>
+      <a class="b b-wide has-img" href="#"><img src="assets/solar.jpg" alt=""><div class="b-in"><p class="b-k">03 · Energía</p><p class="b-t">Electricidad y autoconsumo</p><p class="b-d">Baja tensión · Fotovoltaica · Cargadores VE</p></div></a>
+      <a class="b" href="#"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M9 2v2M15 20v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></svg></span><div class="b-in"><p class="b-t">KNX y domótica</p><p class="b-d">Automatización de edificios</p></div></a>
+      <a class="b" href="#"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="8" rx="2"/><rect x="2" y="12" width="20" height="8" rx="2"/><path d="M6 8h.01M6 16h.01"/></svg></span><div class="b-in"><p class="b-t">Soluciones informáticas</p><p class="b-d">IT, backups y soporte</p></div></a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
